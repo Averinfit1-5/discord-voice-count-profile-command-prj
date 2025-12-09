@@ -77,12 +77,13 @@ async def profile(ctx, member: disnake.Member = None):
         await ctx.send(embed=embed)
     else:
         embed = disnake.Embed(
-                        title=f"Профиль **{member.name}**",
-                        description="",
-                        color=0x008fff)
+                title=f"Профиль **{member.name}**",
+                description="",
+                color=0x008fff)
         embed.add_field(name="", value=f"""Час - `0ч. 0х. 0с.`""", inline=True)
         embed.add_field(name="", value=f"""Пінг - {member.mention}""" , inline=False)
         embed.set_thumbnail(url=member.avatar)
         await ctx.send(embed=embed)
 
 bot.run(settings['TOKEN'])
+
