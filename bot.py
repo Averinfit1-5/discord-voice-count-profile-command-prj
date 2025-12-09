@@ -71,7 +71,7 @@ async def profile(ctx, member: disnake.Member = None):
                 title=f"Профіль **{member.name}**",
                 description="",
                 color=0x008fff)
-        embed.add_field(name="", value=f"""Час - `{int(hours)}ч. {int(minutes)}х. {int(seconds)}с.`""", inline=True)
+        embed.add_field(name="", value=f"""Час - `{int(hours)}г. {int(minutes)}х. {int(seconds)}с.`""", inline=True)
         embed.add_field(name="", value=f"""Пінг - {member.mention}""" , inline=False)
         embed.set_thumbnail(url=member.avatar)
         await ctx.send(embed=embed)
@@ -80,11 +80,12 @@ async def profile(ctx, member: disnake.Member = None):
                 title=f"Профіль **{member.name}**",
                 description="",
                 color=0x008fff)
-        embed.add_field(name="", value=f"""Час - `0ч. 0х. 0с.`""", inline=True)
+        embed.add_field(name="", value=f"""Час - `0г. 0х. 0с.`""", inline=True)
         embed.add_field(name="", value=f"""Пінг - {member.mention}""" , inline=False)
         embed.set_thumbnail(url=member.avatar)
         await ctx.send(embed=embed)
 
 bot.run(settings['TOKEN'])
+
 
 
